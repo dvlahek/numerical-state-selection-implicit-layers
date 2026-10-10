@@ -1,0 +1,59 @@
+{
+  "lock_schema": "mrbi_selected_profile_confirmation_lock_v1",
+  "development_evidence": {
+    "implementation_version": "mrbi_continuation_v1",
+    "main_raw_sha256": "e1a3917be493485156e87e79c921d2a91a54cf715aa55443516059fc3d370cd6",
+    "selected_profiles_sha256": "4cb9ad804076dea25820b73c1640a81e85c7d3b4ad77d16341555269da707908",
+    "raw_rows": 4365,
+    "dataset_seed_jobs": 45,
+    "datasets": [
+      "breast_cancer",
+      "wine_binary",
+      "wine_0_vs_2",
+      "wine_1_vs_2",
+      "digits_1_vs_7",
+      "digits_2_vs_7",
+      "digits_3_vs_8",
+      "digits_4_vs_9",
+      "digits_5_vs_6"
+    ],
+    "seeds": [0, 1, 2, 3, 4],
+    "selection_rule": "highest five-seed mean balanced_accuracy per dataset among QNN MRBI methods, using pandas Series.idxmax() as in summarize_continuation.py"
+  },
+  "selected_profiles": [
+    {"dataset":"breast_cancer","method":"hybrid_qnn_lenient_qnn_oriented_qnn","kind":"hybrid","profile":"qnn_oriented","hybrid":"qnn_lenient","development_mean_ba":0.904166667},
+    {"dataset":"wine_binary","method":"hybrid_standard_residual_only_qnn","kind":"hybrid","profile":"residual_only","hybrid":"standard","development_mean_ba":0.915873016},
+    {"dataset":"wine_0_vs_2","method":"hybrid_aggressive_full_light_qnn","kind":"hybrid","profile":"full_light","hybrid":"aggressive","development_mean_ba":0.987777778},
+    {"dataset":"wine_1_vs_2","method":"hybrid_standard_full_balanced_qnn","kind":"hybrid","profile":"full_balanced","hybrid":"standard","development_mean_ba":0.965714286},
+    {"dataset":"digits_1_vs_7","method":"hybrid_always_trigger_qnn_oriented_qnn","kind":"hybrid","profile":"qnn_oriented","hybrid":"always_trigger","development_mean_ba":0.983333333},
+    {"dataset":"digits_2_vs_7","method":"forced_qnn_exploratory_qnn","kind":"forced","profile":"qnn_exploratory","hybrid":null,"development_mean_ba":0.958333333},
+    {"dataset":"digits_3_vs_8","method":"hybrid_aggressive_no_detector_qnn","kind":"hybrid","profile":"no_detector","hybrid":"aggressive","development_mean_ba":0.941666667},
+    {"dataset":"digits_4_vs_9","method":"forced_qnn_exploratory_qnn","kind":"forced","profile":"qnn_exploratory","hybrid":null,"development_mean_ba":0.979166667},
+    {"dataset":"digits_5_vs_6","method":"hybrid_standard_residual_only_qnn","kind":"hybrid","profile":"residual_only","hybrid":"standard","development_mean_ba":0.983333333}
+  ],
+  "confirmation_plan": {
+    "seeds": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+    "n_dataset_seed_pairs": 90,
+    "qnn_epochs": 60,
+    "qnn_learning_rate": 0.01,
+    "qnn_layers": 2,
+    "n_qubits": 4,
+    "latent_dim": 16,
+    "spectral_radius": 2,
+    "input_scale": 1.1,
+    "max_samples_per_class": 80,
+    "test_size": 0.3,
+    "random_multistart": {
+      "n_random_starts": 5,
+      "start_distribution": "uniform[-1,1]^d",
+      "include_zero_candidate": true
+    },
+    "primary_comparison": "locked selected MRBI-QNN minus Zero-QNN",
+    "secondary_comparisons": [
+      "locked selected MRBI-QNN minus random-5 multistart QNN",
+      "locked selected MRBI-QNN minus PCA-QNN"
+    ],
+    "no_result_dependent_reselection": true
+  },
+  "provenance_note": "Selected from the complete corrected-continuation development campaign and fixed before confirmation seeds 40-49 were run. The profile map matches both main_raw.csv and selected_profiles.csv."
+}
