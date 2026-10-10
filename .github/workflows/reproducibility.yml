@@ -1,0 +1,48 @@
+name: Reproducibility checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reproducibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install core dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Compile Python sources
+        run: |
+          find experiments scripts -type f -name '*.py' -print0 \
+            | xargs -0 python -m py_compile
+
+      - name: Check tracked aggregate results
+        run: |
+          python scripts/check_final_results.py
+
+      - name: Check locked confirmation protocol
+        run: |
+          python scripts/run_locked_selected_profile_confirmation.py \
+            --dry-run \
+            --seed 40
+
+      - name: Check selector-sweep protocol
+        run: |
+          python scripts/run_all_path_rho_selector_sweep.py \
+            --dry-run \
+            --seed 40 \
+            --rho 2.0
