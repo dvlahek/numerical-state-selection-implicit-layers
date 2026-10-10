@@ -1,0 +1,55 @@
+{
+  "plan": "branch_consistency_analysis_v1",
+  "status": "post-confirmation mechanistic diagnostic",
+  "confirmation_seeds": [40,41,42,43,44,45,46,47,48,49],
+  "n_datasets": 9,
+  "n_dataset_seed_runs": 90,
+  "same_state_thresholds": [1e-06, 0.0001],
+  "pairwise_state_summary": {
+    "mrbi_vs_zero": {"same_rate_1e-06": 0.7381555944055945, "same_rate_0.0001": 0.7389552577052577, "mean_rel_distance": 0.0443787992958825, "median_rel_distance": 0.000190523796113543},
+    "hybrid_ls_vs_zero": {"same_rate_1e-06": 0.7565640378140379, "same_rate_0.0001": 0.7565640378140379, "mean_rel_distance": 0.044810537486074095, "median_rel_distance": 0.00031465944578111743},
+    "hybrid_random_vs_zero": {"same_rate_1e-06": 0.6966837175170509, "same_rate_0.0001": 0.6969151989985325, "mean_rel_distance": 0.1411087209572116, "median_rel_distance": 0.04064269283790683},
+    "multistart5_vs_zero": {"same_rate_1e-06": 0.5897209272209273, "same_rate_0.0001": 0.5897209272209273, "mean_rel_distance": 0.20856637331188685, "median_rel_distance": 0.17090524603568857},
+    "mrbi_vs_hybrid_ls": {"same_rate_1e-06": 0.7523558231891563, "same_rate_0.0001": 0.7556289389622722, "mean_rel_distance": 0.023120417694982607, "median_rel_distance": 3.454485574469802e-05},
+    "mrbi_vs_hybrid_random": {"same_rate_1e-06": 0.6637982387982387, "same_rate_0.0001": 0.6640297202797202, "mean_rel_distance": 0.1449715069660095, "median_rel_distance": 0.04815887316623786},
+    "hybrid_ls_vs_hybrid_random": {"same_rate_1e-06": 0.6633034403867737, "same_rate_0.0001": 0.6635349218682552, "mean_rel_distance": 0.1452134951924939, "median_rel_distance": 0.045380175975993045}
+  },
+  "smoothness_diagnostic": {
+    "zero": {"mean": 3.5196142193801987, "median": 2.394458832633143},
+    "mrbi": {"mean": 3.4280530329258054, "median": 2.3293502386778284},
+    "hybrid_ls": {"mean": 3.35997385885133, "median": 2.306037054799622},
+    "hybrid_random": {"mean": 3.6183104752954183, "median": 2.513724960602938},
+    "multistart5": {"mean": 3.432103994870457, "median": 2.2840915970167917}
+  },
+  "multistart_root_summary": {
+    "mean_distinct_strict_roots_1e6": 1.4364300051800052,
+    "mean_distinct_strict_roots_1e4": 1.4364300051800052,
+    "fraction_multiple_strict_roots_1e6": 0.27221736596736595,
+    "fraction_multiple_strict_roots_1e4": 0.27221736596736595,
+    "selected_same_zero_1e6": 0.5897209272209273,
+    "selected_same_zero_1e4": 0.5897209272209273
+  },
+  "multiple_root_subset": {
+    "n_test_samples_total": 3960,
+    "n_samples_with_at_least_two_strict_roots_1e6": 1080,
+    "pooled_fraction_with_at_least_two_strict_roots_1e6": 0.2727272727272727,
+    "same_state_rate_mrbi_vs_hybrid_ls_1e6": 0.8462962962962963,
+    "same_state_rate_mrbi_vs_zero_1e6": 0.7648148148148148,
+    "same_state_rate_hybrid_ls_vs_zero_1e6": 0.7638888888888888,
+    "same_state_rate_hybrid_random_vs_zero_1e6": 0.7305555555555555,
+    "same_state_rate_multistart5_vs_zero_1e6": 0.4462962962962963
+  },
+  "runtime_context": {
+    "mean_hybrid_random_feature_wall_sec": 0.06507022472233075,
+    "median_hybrid_random_feature_wall_sec": 0.06482101000074181,
+    "mean_hybrid_ls_feature_wall_sec": 0.25724345337783033,
+    "median_hybrid_ls_feature_wall_sec": 0.24747770649992162,
+    "mean_mrbi_test_wall_sec": 13.850294097755613,
+    "median_mrbi_test_wall_sec": 5.673570931499853
+  },
+  "notes": [
+    "State agreement is a numerical returned-state comparison at fixed input; it is not a reconstruction of continuous solution branches.",
+    "Distinct-root counts use only strict-success roots found by zero plus five random starts and are therefore lower bounds on accessible root multiplicity.",
+    "The smoothness diagnostic does not follow balanced accuracy and is not used as an explanation of downstream performance."
+  ]
+}

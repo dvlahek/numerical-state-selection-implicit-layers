@@ -1,0 +1,6 @@
+selector,same_as_zero_n,common_mask_n,same_as_zero_fraction
+selected_mrbi,491,674,0.728486646884273
+hybrid_ls,482,674,0.7151335311572701
+hybrid_random,461,674,0.6839762611275965
+multistart5,163,674,0.24183976261127596
+mrbi_and_ls_both,437,674,0.6483679525222552

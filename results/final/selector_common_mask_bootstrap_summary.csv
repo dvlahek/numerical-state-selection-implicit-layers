@@ -1,0 +1,13 @@
+readout,contrast,task_equal_mean,ci95_low,ci95_high,bootstrap_resamples,n_tasks
+qnn,Zero-Hybrid-Random,0.0266,0.0146,0.0388,20000,9
+qnn,Zero-Multistart-5,0.0664,0.0372,0.0995,20000,9
+qnn,MRBI-Hybrid-Random,0.0203,0.0017,0.0382,20000,9
+qnn,MRBI-Multistart-5,0.0601,0.0320,0.0887,20000,9
+qnn,Hybrid-LS-Hybrid-Random,0.0170,0.0001,0.0338,20000,9
+qnn,Hybrid-LS-Multistart-5,0.0568,0.0326,0.0846,20000,9
+gradient_boosting,Zero-Hybrid-Random,0.0396,0.0052,0.0832,20000,9
+gradient_boosting,Zero-Multistart-5,0.0360,0.0030,0.0851,20000,9
+gradient_boosting,MRBI-Hybrid-Random,0.0389,0.0049,0.0818,20000,9
+gradient_boosting,MRBI-Multistart-5,0.0353,0.0022,0.0846,20000,9
+gradient_boosting,Hybrid-LS-Hybrid-Random,0.0398,0.0137,0.0737,20000,9
+gradient_boosting,Hybrid-LS-Multistart-5,0.0362,0.0025,0.0781,20000,9

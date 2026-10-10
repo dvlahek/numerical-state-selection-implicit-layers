@@ -1,0 +1,54 @@
+{
+  "plan": "selection_quality_qnn_both_strict_v1",
+  "analysis_role": "post-confirmation QNN selection-quality diagnostic",
+  "qnn_replicates": 4,
+  "qnn_seed_rule": "data_seed + 777 + rep * 10000",
+  "state_subset": "method-specific Zero strict AND method strict AND different state",
+  "results": {
+    "selected_mrbi": {
+      "datasets_present": 9,
+      "dataset_equal_mean_qnn_accuracy_delta": 0.03841177744947586,
+      "dataset_equal_median_qnn_accuracy_delta": 0.02409297052154195,
+      "dataset_equal_mean_qnn_prediction_disagreement": 0.11211794341754658,
+      "positive_neutral_negative_datasets": {"positive": 7, "neutral": 0, "negative": 2},
+      "pooled_over_four_qnn_reps": {"replicated_subset_sample_count": 732, "method_correct_zero_wrong": 45, "zero_correct_method_wrong": 32, "accuracy_delta_method_minus_zero": 0.017759562841530054, "prediction_disagreement": 0.1051912568306011},
+      "dataset_deltas": {"breast_cancer": 0.014880952380952384, "digits_1_vs_7": -0.05765993265993266, "digits_2_vs_7": 0.02409297052154195, "digits_3_vs_8": 0.04549319727891156, "digits_4_vs_9": 0.019791666666666666, "digits_5_vs_6": 0.03125, "wine_0_vs_2": -0.02380952380952381, "wine_1_vs_2": 0.041666666666666664, "wine_binary": 0.25}
+    },
+    "hybrid_ls": {
+      "datasets_present": 9,
+      "dataset_equal_mean_qnn_accuracy_delta": 0.029382779643196306,
+      "dataset_equal_median_qnn_accuracy_delta": 0.02678571428571428,
+      "dataset_equal_mean_qnn_prediction_disagreement": 0.11994927333469001,
+      "positive_neutral_negative_datasets": {"positive": 5, "neutral": 2, "negative": 2},
+      "pooled_over_four_qnn_reps": {"replicated_subset_sample_count": 768, "method_correct_zero_wrong": 54, "zero_correct_method_wrong": 37, "accuracy_delta_method_minus_zero": 0.022135416666666668, "prediction_disagreement": 0.11848958333333333},
+      "dataset_deltas": {"breast_cancer": 0.028296703296703297, "digits_1_vs_7": -0.09114583333333333, "digits_2_vs_7": 0.03585069444444444, "digits_3_vs_8": 0.1130952380952381, "digits_4_vs_9": -0.015104166666666669, "digits_5_vs_6": 0.0, "wine_0_vs_2": 0.02678571428571428, "wine_1_vs_2": 0.0, "wine_binary": 0.16666666666666666}
+    },
+    "hybrid_random": {
+      "datasets_present": 9,
+      "dataset_equal_mean_qnn_accuracy_delta": -0.07481386283469617,
+      "dataset_equal_median_qnn_accuracy_delta": -0.07708333333333332,
+      "dataset_equal_mean_qnn_prediction_disagreement": 0.16851175444925445,
+      "positive_neutral_negative_datasets": {"positive": 2, "neutral": 0, "negative": 7},
+      "pooled_over_four_qnn_reps": {"replicated_subset_sample_count": 852, "method_correct_zero_wrong": 54, "zero_correct_method_wrong": 67, "accuracy_delta_method_minus_zero": -0.015258215962441314, "prediction_disagreement": 0.142018779342723},
+      "dataset_deltas": {"breast_cancer": 0.03422619047619047, "digits_1_vs_7": -0.015388257575757572, "digits_2_vs_7": -0.07708333333333332, "digits_3_vs_8": 0.018849206349206348, "digits_4_vs_9": -0.03670634920634921, "digits_5_vs_6": -0.13888888888888887, "wine_0_vs_2": -0.11458333333333333, "wine_1_vs_2": -0.09375, "wine_binary": -0.25}
+    },
+    "multistart5": {
+      "datasets_present": 9,
+      "dataset_equal_mean_qnn_accuracy_delta": -0.07525869832198613,
+      "dataset_equal_median_qnn_accuracy_delta": -0.05380366161616162,
+      "dataset_equal_mean_qnn_prediction_disagreement": 0.17464679790266277,
+      "positive_neutral_negative_datasets": {"positive": 0, "neutral": 0, "negative": 9},
+      "pooled_over_four_qnn_reps": {"replicated_subset_sample_count": 2044, "method_correct_zero_wrong": 97, "zero_correct_method_wrong": 198, "accuracy_delta_method_minus_zero": -0.04941291585127201, "prediction_disagreement": 0.14432485322896282},
+      "dataset_deltas": {"breast_cancer": -0.050140831390831385, "digits_1_vs_7": -0.0173992673992674, "digits_2_vs_7": -0.05380366161616162, "digits_3_vs_8": -0.013732993197278914, "digits_4_vs_9": -0.09275085034013605, "digits_5_vs_6": -0.04173085901027078, "wine_0_vs_2": -0.16186417748917747, "wine_1_vs_2": -0.08129396645021644, "wine_binary": -0.1646116780045351}
+    }
+  },
+  "notes": [
+    "Implicit feature matrices are reused from the established cache.",
+    "The method-specific masks are reused from selection_quality_both_strict_v1.",
+    "QNN training is repeated only because prior outputs did not store per-sample predictions.",
+    "The four QNN seeds exactly match the established exploratory multiseed protocol.",
+    "Existing full-test balanced accuracies are checked against the old QNN checkpoint when available.",
+    "Cross-method subset sizes differ, so method-vs-method causal comparisons are not claimed.",
+    "Results are descriptive and post-confirmation."
+  ]
+}

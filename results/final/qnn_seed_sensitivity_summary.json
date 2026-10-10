@@ -1,0 +1,44 @@
+{
+  "plan": "qnn_zero_feature_noise_floor_v1",
+  "status": "post-confirmation readout-seed diagnostic",
+  "replicates": 4,
+  "confirmation_noise_floor": {
+    "mean_dataset_level_sd": 0.014338237380054152,
+    "median_dataset_level_sd": 0.011410886614691008,
+    "mean_dataset_level_range": 0.032096560846560936,
+    "mean_run_level_sd": 0.03636297477690748,
+    "mean_run_level_abs_delta_from_canonical": 0.04343474426807761,
+    "dataset_rows": [
+      {"dataset":"breast_cancer","replicate_mean_ba":[0.86875,0.8645833333333334,0.9125,0.8604166666666666],"mean_over_qnn_seeds":0.8765625,"sd_across_qnn_seed_means":0.02419867372781378,"range_across_qnn_seed_means":0.05208333333333337,"canonical_dataset_mean":0.86875},
+      {"dataset":"wine_binary","replicate_mean_ba":[0.903968253968254,0.9130952380952382,0.9166666666666667,0.8765873015873016],"mean_over_qnn_seeds":0.9025793650793652,"sd_across_qnn_seed_means":0.018134240432753163,"range_across_qnn_seed_means":0.04007936507936516,"canonical_dataset_mean":0.903968253968254},
+      {"dataset":"wine_0_vs_2","replicate_mean_ba":[0.9622222222222222,0.95,0.9505555555555556,0.9644444444444444],"mean_over_qnn_seeds":0.9568055555555555,"sd_across_qnn_seed_means":0.007595415012894747,"range_across_qnn_seed_means":0.014444444444444482,"canonical_dataset_mean":0.9622222222222222},
+      {"dataset":"wine_1_vs_2","replicate_mean_ba":[0.9085714285714286,0.9428571428571428,0.9252380952380953,0.9533333333333334],"mean_over_qnn_seeds":0.9325000000000001,"sd_across_qnn_seed_means":0.019719786825455814,"range_across_qnn_seed_means":0.04476190476190478,"canonical_dataset_mean":0.9085714285714286},
+      {"dataset":"digits_1_vs_7","replicate_mean_ba":[0.9500000000000002,0.9604166666666668,0.9583333333333334,0.95],"mean_over_qnn_seeds":0.9546875000000001,"sd_across_qnn_seed_means":0.005479074249326235,"range_across_qnn_seed_means":0.010416666666666852,"canonical_dataset_mean":0.9500000000000002},
+      {"dataset":"digits_2_vs_7","replicate_mean_ba":[0.91875,0.93125,0.9458333333333334,0.9375],"mean_over_qnn_seeds":0.9333333333333333,"sd_across_qnn_seed_means":0.011410886614691008,"range_across_qnn_seed_means":0.02708333333333346,"canonical_dataset_mean":0.91875},
+      {"dataset":"digits_3_vs_8","replicate_mean_ba":[0.8583333333333332,0.8916666666666668,0.9145833333333334,0.8791666666666668],"mean_over_qnn_seeds":0.8859375,"sd_across_qnn_seed_means":0.023531831770635413,"range_across_qnn_seed_means":0.056250000000000244,"canonical_dataset_mean":0.8583333333333332},
+      {"dataset":"digits_4_vs_9","replicate_mean_ba":[0.95,0.9708333333333334,0.9583333333333334,0.9541666666666668],"mean_over_qnn_seeds":0.9583333333333335,"sd_across_qnn_seed_means":0.009001028747788731,"range_across_qnn_seed_means":0.02083333333333348,"canonical_dataset_mean":0.95},
+      {"dataset":"digits_5_vs_6","replicate_mean_ba":[0.9729166666666668,0.9541666666666668,0.9770833333333334,0.96875],"mean_over_qnn_seeds":0.9682291666666667,"sd_across_qnn_seed_means":0.009973199039128484,"range_across_qnn_seed_means":0.022916666666666585,"canonical_dataset_mean":0.9729166666666668}
+    ]
+  },
+  "development_zero": {
+    "development_seeds": [0,1,2,3,4],
+    "dataset_summary": [
+      {"dataset":"breast_cancer","zero_dev_ba_mean":0.8833333333333334,"zero_dev_ba_sd":0.06002025121203304},
+      {"dataset":"wine_binary","zero_dev_ba_mean":0.8619047619047618,"zero_dev_ba_sd":0.10322800815634503},
+      {"dataset":"wine_0_vs_2","zero_dev_ba_mean":0.9622222222222222,"zero_dev_ba_sd":0.03975231959999626},
+      {"dataset":"wine_1_vs_2","zero_dev_ba_mean":0.9428571428571428,"zero_dev_ba_sd":0.05502009527757779},
+      {"dataset":"digits_1_vs_7","zero_dev_ba_mean":0.9666666666666666,"zero_dev_ba_sd":0.023753654689565397},
+      {"dataset":"digits_2_vs_7","zero_dev_ba_mean":0.9416666666666668,"zero_dev_ba_sd":0.04007371679514865},
+      {"dataset":"digits_3_vs_8","zero_dev_ba_mean":0.9458333333333334,"zero_dev_ba_sd":0.03784562942621869},
+      {"dataset":"digits_4_vs_9","zero_dev_ba_mean":0.9625,"zero_dev_ba_sd":0.027163343355011044},
+      {"dataset":"digits_5_vs_6","zero_dev_ba_mean":0.9625,"zero_dev_ba_sd":0.022821773229381927}
+    ],
+    "overall_dataset_mean": 0.9366093474426808
+  },
+  "notes": [
+    "The same Zero implicit features are reused across QNN readout seeds within each dataset-seed case.",
+    "The canonical QNN seed is included together with three additional readout seeds.",
+    "MRBI was not rerun under the three additional readout seeds, so the four-seed Zero mean is not a method-comparison baseline.",
+    "The primary MRBI-Zero confirmation remains paired because both methods use the same QNN seed within each dataset-seed pair."
+  ]
+}

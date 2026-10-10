@@ -1,0 +1,162 @@
+{
+  "plan": "local_feature_regularity_robustness_v1",
+  "analysis_role": "post-confirmation descriptive geometry diagnostic",
+  "reported_view": "raw strict-only neighbor pairs",
+  "rho": 2.0,
+  "state_change_threshold": 1e-06,
+  "bootstrap_reps": 20000,
+  "bootstrap_unit": "task",
+  "nested_k_choices": [
+    1,
+    3,
+    5
+  ],
+  "representative_k": 3,
+  "strict_pair_definition": "Both endpoints satisfy the strict criterion under Zero and the compared selector. Pair sets are method-specific.",
+  "k3_dataset_equal": {
+    "selected_mrbi": {
+      "median_amplification": 2.154670050090366,
+      "p90_amplification": 4.920971987393762,
+      "p95_amplification": 5.933256750329818
+    },
+    "hybrid_ls": {
+      "median_amplification": 2.1547808205327046,
+      "p90_amplification": 4.819808724956928,
+      "p95_amplification": 5.7693059098780575
+    },
+    "hybrid_random": {
+      "median_amplification": 2.311958765569311,
+      "p90_amplification": 5.376572118055266,
+      "p95_amplification": 6.56289398513324
+    },
+    "multistart5": {
+      "median_amplification": 2.514876042311638,
+      "p90_amplification": 5.849753646765083,
+      "p95_amplification": 7.110883496241465
+    }
+  },
+  "k3_structured_vs_arbitrary": [
+    {
+      "metric": "p90",
+      "method_a": "selected_mrbi",
+      "method_b": "hybrid_random",
+      "mean_difference_a_minus_b": -0.4556001306615045,
+      "bootstrap95_low": -0.8719580736178997,
+      "bootstrap95_high": -0.1261719686990876,
+      "task_signs_lower_equal_higher": "7/1/1"
+    },
+    {
+      "metric": "p95",
+      "method_a": "selected_mrbi",
+      "method_b": "hybrid_random",
+      "mean_difference_a_minus_b": -0.6296372348034225,
+      "bootstrap95_low": -1.123850111524464,
+      "bootstrap95_high": -0.2099063733781629,
+      "task_signs_lower_equal_higher": "8/1/0"
+    },
+    {
+      "metric": "p90",
+      "method_a": "selected_mrbi",
+      "method_b": "multistart5",
+      "mean_difference_a_minus_b": -0.928781659371321,
+      "bootstrap95_low": -1.21755931736806,
+      "bootstrap95_high": -0.6953070710937321,
+      "task_signs_lower_equal_higher": "9/0/0"
+    },
+    {
+      "metric": "p95",
+      "method_a": "selected_mrbi",
+      "method_b": "multistart5",
+      "mean_difference_a_minus_b": -1.177626745911647,
+      "bootstrap95_low": -1.4452208778604303,
+      "bootstrap95_high": -0.9196765438354566,
+      "task_signs_lower_equal_higher": "9/0/0"
+    },
+    {
+      "metric": "p90",
+      "method_a": "hybrid_ls",
+      "method_b": "hybrid_random",
+      "mean_difference_a_minus_b": -0.5567633930983381,
+      "bootstrap95_low": -0.9922033163071478,
+      "bootstrap95_high": -0.1952088436498492,
+      "task_signs_lower_equal_higher": "7/0/2"
+    },
+    {
+      "metric": "p95",
+      "method_a": "hybrid_ls",
+      "method_b": "hybrid_random",
+      "mean_difference_a_minus_b": -0.793588075255183,
+      "bootstrap95_low": -1.342085286681832,
+      "bootstrap95_high": -0.3177297104750226,
+      "task_signs_lower_equal_higher": "8/0/1"
+    },
+    {
+      "metric": "p90",
+      "method_a": "hybrid_ls",
+      "method_b": "multistart5",
+      "mean_difference_a_minus_b": -1.029944921808155,
+      "bootstrap95_low": -1.3465322507860469,
+      "bootstrap95_high": -0.7549989672624803,
+      "task_signs_lower_equal_higher": "9/0/0"
+    },
+    {
+      "metric": "p95",
+      "method_a": "hybrid_ls",
+      "method_b": "multistart5",
+      "mean_difference_a_minus_b": -1.3415775863634076,
+      "bootstrap95_low": -1.6802850383446284,
+      "bootstrap95_high": -1.013970280140797,
+      "task_signs_lower_equal_higher": "9/0/0"
+    }
+  ],
+  "raw_strict_only_ordering": {
+    "1": {
+      "p90": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"],
+      "p95": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"]
+    },
+    "3": {
+      "p90": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"],
+      "p95": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"]
+    },
+    "5": {
+      "p90": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"],
+      "p95": ["hybrid_ls", "selected_mrbi", "hybrid_random", "multistart5"]
+    }
+  },
+  "pair_direction_vs_zero_k3": {
+    "hybrid_ls": {
+      "fraction_smaller_than_zero": 0.29437653924083645,
+      "fraction_equal_to_zero": 0.44426161842699813,
+      "fraction_larger_than_zero": 0.2613618423321653,
+      "changed_sample_fraction": 0.24343596218596217,
+      "changed_pair_fraction": 0.377664215070139
+    },
+    "hybrid_random": {
+      "fraction_smaller_than_zero": 0.2780509138490219,
+      "fraction_equal_to_zero": 0.41274234043418495,
+      "fraction_larger_than_zero": 0.309206745716793,
+      "changed_sample_fraction": 0.3033162824829491,
+      "changed_pair_fraction": 0.4488644545291145
+    },
+    "multistart5": {
+      "fraction_smaller_than_zero": 0.4309027042532648,
+      "fraction_equal_to_zero": 0.1366231717826405,
+      "fraction_larger_than_zero": 0.4324741239640946,
+      "changed_sample_fraction": 0.4102790727790728,
+      "changed_pair_fraction": 0.55808268176345
+    },
+    "selected_mrbi": {
+      "fraction_smaller_than_zero": 0.31249485437626595,
+      "fraction_equal_to_zero": 0.41745440508289255,
+      "fraction_larger_than_zero": 0.2700507405408415,
+      "changed_sample_fraction": 0.2618444055944056,
+      "changed_pair_fraction": 0.4053002800708241
+    }
+  },
+  "robustness_notes": [
+    "The nested k choices are sensitivity settings, not independent replications.",
+    "Changed-pair conditioning weakens the structured-versus-Multistart ordering.",
+    "After standardization, strict-only MRBI and Hybrid-LS remain lower than Multistart-5 at p90 and p95, while comparisons with Hybrid-Random are mixed.",
+    "The geometry result is descriptive and is not used as a causal explanation of downstream accuracy."
+  ]
+}

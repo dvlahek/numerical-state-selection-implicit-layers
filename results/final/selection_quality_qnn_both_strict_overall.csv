@@ -1,0 +1,5 @@
+method,datasets_present,dataset_equal_mean_qnn_accuracy_delta,dataset_equal_median_qnn_accuracy_delta,dataset_equal_mean_qnn_prediction_disagreement,positive_datasets,neutral_datasets,negative_datasets,pooled_replicated_subset_sample_count,pooled_method_correct_zero_wrong,pooled_zero_correct_method_wrong,pooled_accuracy_delta_method_minus_zero,pooled_prediction_disagreement
+selected_mrbi,9,0.03841177744947586,0.02409297052154195,0.11211794341754658,7,0,2,732,45,32,0.017759562841530054,0.1051912568306011
+hybrid_ls,9,0.029382779643196306,0.02678571428571428,0.11994927333469001,5,2,2,768,54,37,0.022135416666666668,0.11848958333333333
+hybrid_random,9,-0.07481386283469617,-0.07708333333333332,0.16851175444925445,2,0,7,852,54,67,-0.015258215962441314,0.142018779342723
+multistart5,9,-0.07525869832198613,-0.05380366161616162,0.17464679790266277,0,0,9,2044,97,198,-0.04941291585127201,0.14432485322896282

@@ -1,0 +1,190 @@
+{
+  "plan": "all_path_rho_selector_sweep_v1",
+  "analysis_role": "post-confirmation numerical selector diagnostic",
+  "methods": [
+    "zero",
+    "selected_mrbi",
+    "hybrid_ls",
+    "hybrid_random",
+    "multistart5"
+  ],
+  "state_match_threshold": 1e-06,
+  "aggregate": {
+    "rhos": [
+      1.2,
+      1.6,
+      2.0,
+      2.25
+    ],
+    "by_rho": {
+      "1.20": {
+        "n_dataset_seed_runs": 90,
+        "success": {
+          "zero": 0.9765340369507036,
+          "selected_mrbi": 0.9769969999136666,
+          "hybrid_ls": 0.9779763446430113,
+          "hybrid_random": 0.9920589441422776,
+          "multistart5": 0.9993055555555556
+        },
+        "pairs": {
+          "selected_mrbi_vs_zero": {
+            "agreement_1e6": 0.9832178623845288,
+            "mean_rel_distance": 0.0013454768422569545,
+            "median_rel_distance": 1.7921809240872813e-13
+          },
+          "hybrid_ls_vs_zero": {
+            "agreement_1e6": 0.9840515194681861,
+            "mean_rel_distance": 0.0020936563882458957,
+            "median_rel_distance": 1.819281977075647e-13
+          },
+          "hybrid_random_vs_zero": {
+            "agreement_1e6": 0.9760025468358802,
+            "mean_rel_distance": 0.007207761576124594,
+            "median_rel_distance": 5.62753726618832e-14
+          },
+          "multistart5_vs_zero": {
+            "agreement_1e6": 0.9712574462574461,
+            "mean_rel_distance": 0.010548262212491541,
+            "median_rel_distance": 6.323218677939349e-13
+          },
+          "selected_mrbi_vs_hybrid_ls": {
+            "agreement_1e6": 0.9819061339894672,
+            "mean_rel_distance": 0.0017104565466201961,
+            "median_rel_distance": 2.8302366067249103e-17
+          }
+        },
+        "multiplicity": {
+          "mean_distinct_strict_roots_1e6": 1.0186960416127084,
+          "fraction_multiple_strict_roots_1e6": 0.012026245359578693,
+          "mean_strict_successful_starts": 5.880129823879824
+        }
+      },
+      "1.60": {
+        "n_dataset_seed_runs": 90,
+        "success": {
+          "zero": 0.8324834887334888,
+          "selected_mrbi": 0.8460869377536046,
+          "hybrid_ls": 0.8452128118794786,
+          "hybrid_random": 0.9549825174825176,
+          "multistart5": 0.996599002849003
+        },
+        "pairs": {
+          "selected_mrbi_vs_zero": {
+            "agreement_1e6": 0.852911594578261,
+            "mean_rel_distance": 0.01803501316266766,
+            "median_rel_distance": 8.121696227120594e-05
+          },
+          "hybrid_ls_vs_zero": {
+            "agreement_1e6": 0.8688660105326772,
+            "mean_rel_distance": 0.018519464782447256,
+            "median_rel_distance": 6.087835664050979e-05
+          },
+          "hybrid_random_vs_zero": {
+            "agreement_1e6": 0.8242229992229992,
+            "mean_rel_distance": 0.07131803906520318,
+            "median_rel_distance": 0.003435591482721561
+          },
+          "multistart5_vs_zero": {
+            "agreement_1e6": 0.7802431364931366,
+            "mean_rel_distance": 0.10088035953637764,
+            "median_rel_distance": 0.02805410554862398
+          },
+          "selected_mrbi_vs_hybrid_ls": {
+            "agreement_1e6": 0.8645806354139688,
+            "mean_rel_distance": 0.011720544723415532,
+            "median_rel_distance": 1.3387209774953073e-05
+          }
+        },
+        "multiplicity": {
+          "mean_distinct_strict_roots_1e6": 1.1694935465768799,
+          "fraction_multiple_strict_roots_1e6": 0.10625863334196665,
+          "mean_strict_successful_starts": 5.331366010532676
+        }
+      },
+      "2.00": {
+        "n_dataset_seed_runs": 90,
+        "success": {
+          "zero": 0.7160731244064577,
+          "selected_mrbi": 0.7363744280410949,
+          "hybrid_ls": 0.7361666882500216,
+          "hybrid_random": 0.9152383881550549,
+          "multistart5": 0.9924701070534405
+        },
+        "pairs": {
+          "selected_mrbi_vs_zero": {
+            "agreement_1e6": 0.7381555944055945,
+            "mean_rel_distance": 0.0443787992958825,
+            "median_rel_distance": 0.000190523796113543
+          },
+          "hybrid_ls_vs_zero": {
+            "agreement_1e6": 0.7565640378140379,
+            "mean_rel_distance": 0.044810537486074095,
+            "median_rel_distance": 0.00031465944578111743
+          },
+          "hybrid_random_vs_zero": {
+            "agreement_1e6": 0.6966837175170509,
+            "mean_rel_distance": 0.1411087209572116,
+            "median_rel_distance": 0.04064269283790683
+          },
+          "multistart5_vs_zero": {
+            "agreement_1e6": 0.5897209272209273,
+            "mean_rel_distance": 0.20856637331188685,
+            "median_rel_distance": 0.17090524603568857
+          },
+          "selected_mrbi_vs_hybrid_ls": {
+            "agreement_1e6": 0.7523558231891563,
+            "mean_rel_distance": 0.023120417694982607,
+            "median_rel_distance": 3.454485574469802e-05
+          }
+        },
+        "multiplicity": {
+          "mean_distinct_strict_roots_1e6": 1.4364300051800052,
+          "fraction_multiple_strict_roots_1e6": 0.27221736596736595,
+          "mean_strict_successful_starts": 4.860613614780281
+        }
+      },
+      "2.25": {
+        "n_dataset_seed_runs": 90,
+        "success": {
+          "zero": 0.6841130320296986,
+          "selected_mrbi": 0.7192550505050503,
+          "hybrid_ls": 0.720053095053095,
+          "hybrid_random": 0.8889261201761203,
+          "multistart5": 0.9897511439178105
+        },
+        "pairs": {
+          "selected_mrbi_vs_zero": {
+            "agreement_1e6": 0.7116285720452388,
+            "mean_rel_distance": 0.05759891933975769,
+            "median_rel_distance": 0.0007279027432781674
+          },
+          "hybrid_ls_vs_zero": {
+            "agreement_1e6": 0.726134205300872,
+            "mean_rel_distance": 0.05583806474961698,
+            "median_rel_distance": 0.0004954222456186497
+          },
+          "hybrid_random_vs_zero": {
+            "agreement_1e6": 0.6706617456617456,
+            "mean_rel_distance": 0.1590086345642712,
+            "median_rel_distance": 0.04934959654118237
+          },
+          "multistart5_vs_zero": {
+            "agreement_1e6": 0.5222017180350513,
+            "mean_rel_distance": 0.2538570769954946,
+            "median_rel_distance": 0.2613012048160922
+          },
+          "selected_mrbi_vs_hybrid_ls": {
+            "agreement_1e6": 0.7353492186825521,
+            "mean_rel_distance": 0.02642802107693901,
+            "median_rel_distance": 6.502910946528389e-05
+          }
+        },
+        "multiplicity": {
+          "mean_distinct_strict_roots_1e6": 1.624492251575585,
+          "fraction_multiple_strict_roots_1e6": 0.38774173357506686,
+          "mean_strict_successful_starts": 4.682968574635241
+        }
+      }
+    }
+  }
+}

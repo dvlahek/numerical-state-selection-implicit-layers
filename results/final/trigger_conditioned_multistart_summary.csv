@@ -1,0 +1,7 @@
+readout,n,original_delta_multistart_minus_zero,trigger_conditioned_delta_multistart_minus_zero,positive_tasks,neutral_tasks,negative_tasks
+logistic_regression,335,-0.0198,-0.0097,2,3,4
+rbf_svm,335,-0.0035,0.0395,2,2,5
+mlp,335,-0.0217,0.0442,3,3,3
+random_forest,335,-0.0440,-0.0598,1,3,5
+gradient_boosting,335,-0.0431,-0.0161,2,3,4
+qnn,335,-0.0753,-0.0270,2,0,7

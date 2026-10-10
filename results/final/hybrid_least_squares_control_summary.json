@@ -1,0 +1,20 @@
+{
+  "plan": "hybrid_least_squares_control_v1",
+  "overall": {
+    "n_datasets": 9,
+    "ls_max_nfev": 300,
+    "hybrid_ls_ba_mean": 0.9294422398589065,
+    "selected_mrbi_ba_mean": 0.9298500881834215,
+    "delta_mrbi_minus_hybrid_ls_mean": 0.0004078483245149404,
+    "delta_mrbi_minus_hybrid_ls_median": -0.004166666666666541,
+    "delta_95pct_dataset_bootstrap": [-0.004539241622575007, 0.005696649029982261],
+    "positive_datasets": 4,
+    "neutral_datasets": 0,
+    "negative_datasets": 5,
+    "exact_signed_rank_statistic": 23.0,
+    "exact_signed_rank_p_greater": 0.5,
+    "hybrid_ls_success_mean": 0.7361666882500216,
+    "hybrid_ls_accept_rate_mean": 0.5181985452818785,
+    "hybrid_ls_changed_rate_mean": 0.2434359621859622
+  }
+}

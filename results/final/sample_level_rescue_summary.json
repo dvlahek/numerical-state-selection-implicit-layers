@@ -1,0 +1,53 @@
+{
+  "plan": "sample_level_rescue_analysis_v1",
+  "analysis_role": "post-confirmation exploratory mechanistic diagnostic",
+  "rho_for_prediction_analysis": 2.0,
+  "readouts": {
+    "logreg": {
+      "datasets_with_rescue_samples": 9,
+      "dataset_mean_rescue_delta_multistart_minus_zero": 0.0039088644959783155,
+      "dataset_median_rescue_delta_multistart_minus_zero": 0.007194244604316547,
+      "rescue_positive_neutral_negative": {"positive": 6, "neutral": 0, "negative": 3},
+      "multi_root_disagreement_vs_zero": {"selected_mrbi": 0.014346895078814509, "hybrid_ls": 0.012565685332142118, "hybrid_random": 0.024362905205802508, "multistart5": 0.03523221506454714},
+      "multi_root_disagreement_mrbi_vs_ls": 0.005049183602881542
+    },
+    "svm_rbf": {
+      "datasets_with_rescue_samples": 9,
+      "dataset_mean_rescue_delta_multistart_minus_zero": 0.007433197098575111,
+      "dataset_median_rescue_delta_multistart_minus_zero": 0.0,
+      "rescue_positive_neutral_negative": {"positive": 4, "neutral": 2, "negative": 3},
+      "multi_root_disagreement_vs_zero": {"selected_mrbi": 0.02818235899885398, "hybrid_ls": 0.02702410676852146, "hybrid_random": 0.0510820840875435, "multistart5": 0.061491992617315194},
+      "multi_root_disagreement_mrbi_vs_ls": 0.007408252230332523
+    },
+    "mlp": {
+      "datasets_with_rescue_samples": 9,
+      "dataset_mean_rescue_delta_multistart_minus_zero": -0.0005982718816501763,
+      "dataset_median_rescue_delta_multistart_minus_zero": -0.007633587786259542,
+      "rescue_positive_neutral_negative": {"positive": 4, "neutral": 0, "negative": 5},
+      "multi_root_disagreement_vs_zero": {"selected_mrbi": 0.01641294076402186, "hybrid_ls": 0.01899771060313662, "hybrid_random": 0.0358360083989879, "multistart5": 0.04410382070197458},
+      "multi_root_disagreement_mrbi_vs_ls": 0.009730086643522472
+    },
+    "rf": {
+      "datasets_with_rescue_samples": 9,
+      "dataset_mean_rescue_delta_multistart_minus_zero": 0.010879754367881488,
+      "dataset_median_rescue_delta_multistart_minus_zero": 0.007633587786259542,
+      "rescue_positive_neutral_negative": {"positive": 5, "neutral": 1, "negative": 3},
+      "multi_root_disagreement_vs_zero": {"selected_mrbi": 0.029143992579847598, "hybrid_ls": 0.02710436147510961, "hybrid_random": 0.050597410605333654, "multistart5": 0.06408475968594467},
+      "multi_root_disagreement_mrbi_vs_ls": 0.025446493849836025
+    },
+    "gb": {
+      "datasets_with_rescue_samples": 9,
+      "dataset_mean_rescue_delta_multistart_minus_zero": 0.024040616859034428,
+      "dataset_median_rescue_delta_multistart_minus_zero": 0.015267175572519083,
+      "rescue_positive_neutral_negative": {"positive": 7, "neutral": 1, "negative": 1},
+      "multi_root_disagreement_vs_zero": {"selected_mrbi": 0.04146105213882475, "hybrid_ls": 0.04124806268751887, "hybrid_random": 0.06571445952849744, "multistart5": 0.07426568806402045},
+      "multi_root_disagreement_mrbi_vs_ls": 0.03329941843632157
+    }
+  },
+  "input_drive": {
+    "1.20": {"mean_dataset_spearman": -0.044736158182143576, "median_dataset_spearman": -0.04150113885494033, "negative_correlations": 8, "positive_correlations": 1, "mean_high_minus_low_multiple_root_fraction": -0.009220409220409223},
+    "1.60": {"mean_dataset_spearman": -0.08895113619436172, "median_dataset_spearman": -0.08618509324775653, "negative_correlations": 8, "positive_correlations": 1, "mean_high_minus_low_multiple_root_fraction": -0.0457038332038332},
+    "2.00": {"mean_dataset_spearman": -0.06794973006017309, "median_dataset_spearman": -0.07238360116183792, "negative_correlations": 8, "positive_correlations": 1, "mean_high_minus_low_multiple_root_fraction": -0.04440019856686524},
+    "2.25": {"mean_dataset_spearman": -0.062253602973844274, "median_dataset_spearman": -0.07024477603790727, "negative_correlations": 8, "positive_correlations": 1, "mean_high_minus_low_multiple_root_fraction": -0.04827117327117328}
+  }
+}

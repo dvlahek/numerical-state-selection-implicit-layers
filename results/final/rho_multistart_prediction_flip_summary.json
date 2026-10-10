@@ -1,0 +1,41 @@
+{
+  "plan": "rho_multistart_prediction_flip_v1",
+  "analysis_role": "post-confirmation mechanistic diagnostic",
+  "state_match_threshold": 1e-06,
+  "aggregate": {
+    "by_rho": {
+      "1.20": {
+        "n_dataset_seed_cases": 90,
+        "mean_dataset_state_change_rate": 0.028742553742553745,
+        "mean_dataset_prediction_flip_rate": 0.0020358499525166187,
+        "mean_dataset_prediction_flip_given_state_change": 0.02814088598402324,
+        "mean_dataset_zero_ba": 0.970407848324515,
+        "mean_dataset_multistart5_ba": 0.9697398589065256
+      },
+      "1.60": {
+        "n_dataset_seed_cases": 90,
+        "mean_dataset_state_change_rate": 0.21975686350686352,
+        "mean_dataset_prediction_flip_rate": 0.014676681343348014,
+        "mean_dataset_prediction_flip_given_state_change": 0.038866131610227915,
+        "mean_dataset_zero_ba": 0.9680533509700177,
+        "mean_dataset_multistart5_ba": 0.9672332451499118
+      },
+      "2.00": {
+        "n_dataset_seed_cases": 90,
+        "mean_dataset_state_change_rate": 0.41027907277907283,
+        "mean_dataset_prediction_flip_rate": 0.029774238107571443,
+        "mean_dataset_prediction_flip_given_state_change": 0.04526348038960007,
+        "mean_dataset_zero_ba": 0.9623699294532627,
+        "mean_dataset_multistart5_ba": 0.9623743386243385
+      },
+      "2.25": {
+        "n_dataset_seed_cases": 90,
+        "mean_dataset_state_change_rate": 0.4777982819649486,
+        "mean_dataset_prediction_flip_rate": 0.030796749546749547,
+        "mean_dataset_prediction_flip_given_state_change": 0.04604578648155093,
+        "mean_dataset_zero_ba": 0.9588580246913581,
+        "mean_dataset_multistart5_ba": 0.9568672839506173
+      }
+    }
+  }
+}

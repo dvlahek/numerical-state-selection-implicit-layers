@@ -1,0 +1,82 @@
+{
+  "plan": "locked_selected_profile_confirmation_v1",
+  "development_raw_sha256": "e1a3917be493485156e87e79c921d2a91a54cf715aa55443516059fc3d370cd6",
+  "development_selected_profiles_sha256": "4cb9ad804076dea25820b73c1640a81e85c7d3b4ad77d16341555269da707908",
+  "development_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "confirmation_seeds": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "n_datasets": 9,
+  "n_dataset_seed_pairs": 90,
+  "source_confirmation_commit": "6d047ba8341962b97b4a69e77b026380ed468b0d",
+  "primary_statistical_unit": "dataset mean across ten confirmation seeds",
+  "primary_comparison": "selected MRBI-QNN minus Zero-QNN",
+  "overall": {
+    "pca_ba_mean": 0.9721935626102292,
+    "zero_ba_mean": 0.9215013227513228,
+    "selected_mrbi_ba_mean": 0.9298500881834215,
+    "multistart5_ba_mean": 0.9137411816578482,
+    "delta_selected_zero_mean": 0.008348765432098768,
+    "delta_selected_zero_median": 0.005555555555555547,
+    "delta_selected_zero_bootstrap95_dataset_ci": [
+      -0.0013007054673721318,
+      0.018373015873015874
+    ],
+    "delta_selected_zero_positive_datasets": 6,
+    "delta_selected_zero_neutral_datasets": 1,
+    "delta_selected_zero_negative_datasets": 2,
+    "wilcoxon_selected_gt_zero": {
+      "statistic": 27.5,
+      "pvalue": 0.1015625,
+      "alternative": "greater",
+      "zero_tolerance": 1e-12,
+      "method": "exact signed-rank sign permutation"
+    },
+    "delta_selected_multistart5_mean": 0.0161089065255732,
+    "delta_selected_multistart5_median": 0.010416666666666696,
+    "delta_selected_multistart5_bootstrap95_dataset_ci": [
+      0.004221781305114645,
+      0.029490740740740744
+    ],
+    "wilcoxon_selected_gt_multistart5": {
+      "statistic": 26,
+      "pvalue": 0.0234375,
+      "alternative": "greater",
+      "zero_tolerance": 1e-12,
+      "method": "exact signed-rank sign permutation"
+    },
+    "delta_selected_pca_mean": -0.04234347442680776,
+    "delta_multistart5_zero_mean": -0.007760141093474433,
+    "selected_solver_success_gain_vs_zero_mean": 0.020301303634636954,
+    "zero_success_rate_mean": 0.7160731244064578,
+    "selected_success_rate_mean": 0.7363744280410947,
+    "multistart5_success_rate_mean": 0.9924701070534403,
+    "zero_feature_time_sec_mean": 0.04170198891119475,
+    "selected_feature_time_sec_mean": 46.22983633462201,
+    "multistart5_feature_time_sec_mean": 0.17542820787792962,
+    "development_selected_ba_mean": 0.9577072311111112,
+    "confirmation_minus_development_selected_ba_mean": -0.027857142927689618
+  },
+  "interpretation_notes": [
+    "The dataset-specific methods were selected on development seeds 0-4 before confirmation seeds 40-49 were run.",
+    "Confirmation results do not change the selected method, dataset set, seed set, or thresholds.",
+    "The primary analysis uses nine dataset-level paired differences, each averaged over ten confirmation seeds.",
+    "Random-5 multistart and PCA-QNN are secondary references. The primary comparison is selected MRBI-QNN versus Zero-QNN.",
+    "The confirmation uses new splits of the same nine benchmark tasks; it is not external-dataset validation."
+  ]
+}

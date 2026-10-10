@@ -1,0 +1,19 @@
+{
+  "plan": "hybrid_random_control_v1",
+  "overall": {
+    "n_datasets": 9,
+    "hybrid_random_ba_mean": 0.9259082892416226,
+    "selected_mrbi_ba_mean": 0.9298500881834215,
+    "delta_mrbi_minus_hybrid_random_mean": 0.003941798941798889,
+    "delta_mrbi_minus_hybrid_random_median": 0.004166666666666652,
+    "delta_95pct_dataset_bootstrap": [-0.0077777777777777845, 0.016388888888888786],
+    "positive_datasets": 6,
+    "neutral_datasets": 0,
+    "negative_datasets": 3,
+    "exact_signed_rank_statistic": 27.0,
+    "exact_signed_rank_p_greater": 0.31640625,
+    "hybrid_random_success_mean": 0.9152383881550548,
+    "hybrid_random_accept_rate_mean": 0.44448815073815073,
+    "hybrid_random_changed_rate_mean": 0.3033162824829491
+  }
+}
