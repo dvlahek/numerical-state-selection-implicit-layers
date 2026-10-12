@@ -28,7 +28,7 @@ The first reproducibility-complete public computational snapshot is commit
 
 GitHub Actions workflow run `38053186873` completed successfully for this commit. The workflow checked Python source compilation, the tracked aggregate-result invariants, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode.
 
-Release-preparation edits after this computational baseline are metadata or documentation changes only. They do not modify numerical source code, locked parameters, or tracked scientific results.
+Documentation and citation-metadata edits after this computational baseline do not modify numerical source code, locked parameters, or tracked scientific results. For exact manuscript reproducibility, the computational baseline above is the pinned snapshot.
 
 ## Locked confirmation
 
