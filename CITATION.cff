@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Numerical State Selection Exposes Representation Ambiguity in Nonunique Implicit Neural Layers: reproducibility code and results"
-message: "If you use this repository, please cite the associated manuscript 'Numerical State Selection Exposes Representation Ambiguity in Nonunique Implicit Neural Layers'."
+message: "If you use this repository, please cite this software release and the associated manuscript."
 type: software
 authors:
   - family-names: Vlahek
@@ -9,15 +9,19 @@ authors:
     given-names: Dijana
   - family-names: Schatten
     given-names: Markus
+version: "1.0.0"
+date-released: 2026-10-12
 year: 2026
 license: MIT
 repository-code: "https://github.com/dvlahek/numerical-state-selection-implicit-layers"
-references:
-  - type: article
-    authors:
-      - family-names: Vlahek
-        given-names: Dino
-    title: "A hybrid Gaussian-wavelet multiscale algorithm for zero localization in oscillatory functions"
-    journal: "Numerical Algorithms"
-    year: 2026
-    doi: "10.1007/s11075-026-02484-8"
+preferred-citation:
+  type: generic
+  authors:
+    - family-names: Vlahek
+      given-names: Dino
+    - family-names: Oreški
+      given-names: Dijana
+    - family-names: Schatten
+      given-names: Markus
+  title: "Numerical State Selection Exposes Representation Ambiguity in Nonunique Implicit Neural Layers"
+  year: 2026
