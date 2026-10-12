@@ -118,9 +118,27 @@ spectral_radius(diag(1-z^2) W) < 1
 
 This is not a convergence certificate for the final HYBR root solver.
 
+## Verification
+
+The reproducibility-complete public computational baseline is commit
+
+`e75af819c471e091fa40ec382901757b93256097`.
+
+For that snapshot, GitHub Actions successfully checked Python source compilation, tracked aggregate-result invariants, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode. The same aggregate-result check can be run locally with
+
+```bash
+python scripts/check_final_results.py
+```
+
+Detailed source and release provenance is recorded in `PROVENANCE.md`.
+
 ## Interpretation
 
 The repository is organized around the manuscript's central result: numerical validity, selected representation, local fixed-point attractivity, and downstream utility are distinct properties. High strict-root recovery alone does not define a useful implicit feature.
+
+## Citation
+
+Citation metadata are provided in `CITATION.cff`. The archival DOI will be added after the `v1.0.0` release is deposited on Zenodo.
 
 ## License
 
