@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Numerical State Selection Exposes Representation Ambiguity in Nonunique Implicit Neural Layers: reproducibility code and results"
-message: "If you use this repository, please cite this software release and the associated manuscript."
+message: "If you use this repository, please cite the repository and the associated manuscript."
 type: software
 authors:
   - family-names: Vlahek
@@ -9,8 +9,6 @@ authors:
     given-names: Dijana
   - family-names: Schatten
     given-names: Markus
-version: "1.0.0"
-date-released: 2026-10-12
 year: 2026
 license: MIT
 repository-code: "https://github.com/dvlahek/numerical-state-selection-implicit-layers"
