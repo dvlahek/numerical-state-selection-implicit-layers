@@ -130,7 +130,7 @@ For that snapshot, GitHub Actions successfully checked Python source compilation
 python scripts/check_final_results.py
 ```
 
-Detailed source and release provenance is recorded in `PROVENANCE.md`.
+Detailed source and public-verification provenance is recorded in `PROVENANCE.md`.
 
 ## Interpretation
 
@@ -138,7 +138,7 @@ The repository is organized around the manuscript's central result: numerical va
 
 ## Citation
 
-Citation metadata are provided in `CITATION.cff`. The archival DOI will be added after the `v1.0.0` release is deposited on Zenodo.
+Citation metadata are provided in `CITATION.cff`. For exact reproducibility of the manuscript results, use the computational snapshot identified by commit `e75af819c471e091fa40ec382901757b93256097`.
 
 ## License
 
