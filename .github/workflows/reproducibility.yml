@@ -33,6 +33,7 @@ jobs:
       - name: Check tracked aggregate results
         run: |
           python scripts/check_final_results.py
+          python scripts/check_state_decomposition_results.py
 
       - name: Check locked confirmation protocol
         run: |
