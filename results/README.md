@@ -1,59 +1,18 @@
-# Reported results
+# Aggregate results
 
-This directory contains compact aggregate outputs used in the manuscript and supplementary information.
+This directory contains compact aggregate outputs used to verify the reported numerical results. It is intentionally not a complete archive of per-seed runs, feature matrices, masks, predictions, or other intermediate files.
 
-The files are reported summaries, not a complete dump of intermediate caches.
+The main groups are:
 
-## Locked confirmation
+- locked confirmation summaries
+- spectral-radius and returned-state summaries
+- matched Hybrid-Random and Hybrid-LS controls
+- classical and QNN readout summaries
+- both-strict and common-mask selector analyses
+- common-mask state-retention decomposition
+- local feature-geometry and fixed-point-attractivity summaries
 
-- `final/confirmation_summary.json`
-- `final/confirmation_dataset_summary.csv`
+The compact state-retention table is stored in
+`final/common_mask_state_decomposition_summary.csv`.
 
-Primary Selected MRBI-QNN versus Zero-QNN confirmation.
-
-## Numerical state selection
-
-- `final/all_path_rho_selector_summary.json`
-- `final/rho_multistart_prediction_flip_summary.json`
-- `final/branch_state_summary.json`
-
-Spectral-radius sweep, strict-root multiplicity, returned-state disagreement, and downstream prediction changes.
-
-## Selector controls
-
-- `final/hybrid_random_control_summary.json`
-- `final/hybrid_random_control_dataset_summary.csv`
-- `final/hybrid_least_squares_control_summary.json`
-- `final/hybrid_least_squares_control_dataset_summary.csv`
-
-Matched Hybrid-Random and Hybrid-LS controls.
-
-## Downstream readouts
-
-- `final/all_path_classical_readouts_summary.json`
-- `final/qnn_multiseed_all_paths_summary.json`
-- `final/qnn_seed_sensitivity_summary.json`
-
-Classical and QNN downstream controls.
-
-## Both-strict and common-mask analyses
-
-- `final/selection_quality_both_strict_overall.csv`
-- `final/selection_quality_qnn_both_strict_summary.json`
-- `final/selection_quality_qnn_both_strict_overall.csv`
-- `final/selection_quality_qnn_both_strict_dataset_summary.csv`
-- `final/selector_confound_compact_summary.csv`
-- `final/trigger_conditioned_multistart_summary.csv`
-- `final/selector_common_mask_summary.csv`
-- `final/selector_common_mask_state_overlap.csv`
-- `final/selector_common_mask_bootstrap_summary.csv`
-
-These are post-confirmation descriptive analyses. Task-equal summaries first average seeds within each task and then weight tasks equally.
-
-## Geometry and local fixed-point attractivity
-
-- `final/local_feature_geometry_summary.json`
-- `final/local_feature_geometry_strict_k3.csv`
-- `final/equilibrium_stability_summary.csv`
-
-The attractivity diagnostic uses the spectral radius of the Jacobian of the natural tanh fixed-point map. It does not measure `hybr` solver convergence.
+Large generated outputs are recreated by the scripts in `scripts/` and written under `outputs/`, which is excluded from version control.
