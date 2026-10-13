@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 outputs/
 .DS_Store
+
+# Keep manuscript and local writing files out of the reproducibility repository.
+*.tex
+*.pdf
+*.docx
+*.aux
+*.synctex.gz
+manuscript/
+paper/
+notes/
