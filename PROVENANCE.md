@@ -26,9 +26,13 @@ The first reproducibility-complete public computational snapshot is commit
 
 `e75af819c471e091fa40ec382901757b93256097`.
 
-GitHub Actions workflow run `38053186873` completed successfully for this commit. The workflow checked Python source compilation, the tracked aggregate-result invariants, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode.
+The final manuscript adds a post-confirmation common-mask state-retention decomposition. Its public script, compact aggregate output, and CI check are included in the manuscript-complete computational snapshot
 
-Documentation and citation-metadata edits after this computational baseline do not modify numerical source code, locked parameters, or tracked scientific results. For exact manuscript reproducibility, the computational baseline above is the pinned snapshot.
+`efc45d66136f28c997b5eb5ac52a2cb010dc32c4`.
+
+GitHub Actions workflow run `38453062621` completed successfully for this snapshot. The workflow checked Python source compilation, tracked aggregate-result invariants including the state-retention aggregate, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode.
+
+Documentation edits after this computational snapshot do not modify numerical source code, locked parameters, or tracked scientific results. For exact final-manuscript reproducibility, the manuscript-complete computational snapshot above is the pinned snapshot.
 
 ## Locked confirmation
 
@@ -56,8 +60,11 @@ The following analyses are descriptive or mechanistic and do not replace the loc
 - both-strict state-selection analysis
 - trigger-conditioned selector analysis
 - common all-strict mask analysis
+- common-mask state-retention decomposition
 - local feature geometry
 - local fixed-point attractivity
+
+The state-retention decomposition reuses the established common mask, cached feature matrices, and saved four-seed QNN predictions. It does not regenerate implicit features or retrain QNNs. Its compact manuscript-facing aggregate is stored in `results/final/common_mask_state_decomposition_summary.csv`.
 
 ## Terminology
 
@@ -73,6 +80,7 @@ The manuscript and this public repository use:
 - numerical state selection
 - representation ambiguity
 - common all-strict mask
+- state-retention decomposition
 - task-equal aggregation
 - local fixed-point attractivity
 
