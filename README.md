@@ -18,7 +18,7 @@ The main experimental separation is
 strict recovery != numerical state selection != downstream feature utility
 ```
 
-A final post-confirmation diagnostic additionally separates local fixed-point attractivity from downstream utility.
+Post-confirmation analyses additionally separate state retention and local fixed-point attractivity from downstream utility.
 
 ## Primary downstream test
 
@@ -92,15 +92,16 @@ python -u scripts/run_qnn_multiseed_all_paths.py --replicates 4
 python -u scripts/run_all_path_classical_readouts_rho2.py
 ```
 
-### 4. Strict-root and common-mask state-selection audits
+### 4. Strict-root and common-mask state-selection analyses
 
 ```bash
 python -u scripts/run_selection_quality_both_strict_audit.py
 python -u scripts/run_qnn_both_strict_selection_quality.py
 python -u scripts/run_selector_confound_audit.py
+python -u scripts/run_common_mask_state_decomposition.py --run
 ```
 
-The common all-strict mask requires all five paths to return strict states on the same test case and at least one alternative path to differ from Zero.
+The common all-strict mask requires all five paths to return strict states on the same test case and at least one alternative path to differ from Zero. The final command splits that common mask into selector-specific same-state and different-state subsets without regenerating implicit features or retraining QNNs. Its compact manuscript-facing aggregate is tracked in `results/final/common_mask_state_decomposition_summary.csv`.
 
 ### 5. Post-confirmation mechanism diagnostics
 
@@ -120,14 +121,21 @@ This is not a convergence certificate for the final HYBR root solver.
 
 ## Verification
 
-The reproducibility-complete public computational baseline is commit
+The first reproducibility-complete public computational baseline is commit
 
 `e75af819c471e091fa40ec382901757b93256097`.
 
-For that snapshot, GitHub Actions successfully checked Python source compilation, tracked aggregate-result invariants, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode. The same aggregate-result check can be run locally with
+The manuscript-complete computational snapshot, including the common-mask state-retention decomposition and its tracked aggregate check, is
+
+`efc45d66136f28c997b5eb5ac52a2cb010dc32c4`.
+
+GitHub Actions workflow run `38453062621` completed successfully for this snapshot. The workflow checked Python source compilation, tracked aggregate-result invariants, the locked confirmation protocol in dry-run mode, and the selector-sweep protocol in dry-run mode.
+
+The aggregate checks can be run locally with
 
 ```bash
 python scripts/check_final_results.py
+python scripts/check_state_decomposition_results.py
 ```
 
 Detailed source and public-verification provenance is recorded in `PROVENANCE.md`.
@@ -138,7 +146,7 @@ The repository is organized around the manuscript's central result: numerical va
 
 ## Citation
 
-Citation metadata are provided in `CITATION.cff`. For exact reproducibility of the manuscript results, use the computational snapshot identified by commit `e75af819c471e091fa40ec382901757b93256097`.
+Citation metadata are provided in `CITATION.cff`. For exact reproducibility of the final manuscript results, use computational snapshot `efc45d66136f28c997b5eb5ac52a2cb010dc32c4`.
 
 ## License
 
